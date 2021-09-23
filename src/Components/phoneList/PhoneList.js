@@ -1,27 +1,12 @@
 import React from "react";
 import data from "../../data";
+import PhoneItem from "./phoneItem/PhoneItem";
 
 const PhoneList = () => {
   return (
     <ul>
       {data.phones.map((phone) => (
-        <li key={phone.id}>
-          <h2>{phone.name}</h2>
-          <img src={phone.image} alt={phone.name} />
-          <p>
-            Sale:{" "}
-            {phone.isSale ? "Действует акционная цена" : "В акции не участвует"}
-          </p>
-          <p>{phone.description}</p>
-          <ul>
-            {phone.colors.map((color) => (
-              <li key={color}>{color}</li>
-            ))}
-          </ul>
-          <p>
-            Цена: <span>{phone.price}</span>
-          </p>
-        </li>
+        <PhoneItem phone={phone} key={phone.id} />
       ))}
     </ul>
   );
