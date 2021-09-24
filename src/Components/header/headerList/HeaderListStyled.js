@@ -9,6 +9,7 @@ export const HeaderListContainer = styled.nav`
   }
   .headerListItem {
     text-transform: uppercase;
+    cursor: pointer;
     &:not(:last-child) {
       margin-right: 20px;
     }
