@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   height: 60px;
-  /* background-color: #424242; */
-  background-color: orange;
+  background-color: #424242;
+  /* background-color: orange; */
 
   padding: 0 40px;
   display: flex;
@@ -18,6 +18,6 @@ export const HeaderContainer = styled.header`
   .headerLogoIcon {
     width: 40px;
     height: 40px;
-    fill: white;
+    fill: ${(props) => props.theme.colors.text};
   }
 `;
